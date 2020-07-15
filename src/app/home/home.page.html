@@ -1,0 +1,29 @@
+<!-- <ion-content [fullscreen]="true"> -->
+  <ion-toolbar>
+    <ion-buttons>
+      <!-- <ion-button fill="clear" class="logout" (click)="logout()">
+        <ion-icon color="danger" name="log-in-outline"></ion-icon>
+      </ion-button> -->
+    </ion-buttons>
+  </ion-toolbar>
+
+  <div class="container_wrap">
+    <div style="margin: -100px 32px auto;">
+      <img src="../../assets/songster.png" />
+  
+      <ion-item class="input_item" lines="none">
+        <ion-input #input mode="md" placeholder="Search over 500,000 tabs"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" [disabled]="!input.value" (click)="searchTabs(input.value)">
+        <span>Search Tabs</span>
+      </ion-button>
+    </div>
+  </div>
+  
+  <!-- <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+
+<!-- </ion-content> -->

@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerLink]="['/','list']">
+        <ion-icon color="light" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="right" (click)="logout()">
+        <ion-icon color="danger" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   <ion-title color="light" mode="ios">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="search_container ion-padding" style="height: 175px">
+    <div class="icon">
+      <img class="shibe" [src]="shibePics" /> 
+
+      <!-- <ion-icon class="avatar" color="light" name="person-outline"></ion-icon> -->
+    </div>
+      <h5>{{details?.name}}</h5>
+      <p><small>{{details?.email}}</small></p>
+  </div>
+
+  <div>
+    <ion-note><b><h4 class="ion-margin-horizontal"><u>Liked Songs</u></h4></b></ion-note>
+    <ng-container *ngIf="likedSongs?.liked_songs.length > 0; else noSongs">
+      <ion-item *ngFor="let song of likedSongs?.liked_songs;">
+        <div class="result_field" (click)="showTabs(song.song_id)">
+          <b>{{song.title}}</b><br>
+          <p class="artist ion-no-margin">{{song.artist}}</p>
+        </div>
+        <ion-button slot="end" [color]="likedSongs.status ? 'light' : 'danger'" (click)="unlikeTabs(song)">
+          <ion-icon [color]="likedSongs.status ? 'danger' : 'light'" name="heart-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ng-container>
+  </div>
+
+  <ng-template #noSongs>
+    <div class="noSongs">
+      <ion-icon color="primary" name="sad-outline"></ion-icon>
+      <h6 class="ion-text-center">No Liked Songs</h6>
+    </div>
+  </ng-template>
+
+</ion-content>

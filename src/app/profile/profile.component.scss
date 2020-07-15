@@ -1,0 +1,62 @@
+ion-toolbar {
+  --background: var(--ion-color-primary);
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+.search_container {
+  height: 100px;
+  background-color: var(--ion-color-primary);
+}
+
+.avatar {
+  font-size: 50px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+h5, p {
+  text-align: center;
+  color: white;
+}
+
+p {
+  margin-top: 0;
+}
+
+.icon {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.noSongs {
+  text-align: center;
+  display: block;
+  margin: 50px 0;
+
+  ion-icon {
+    font-size: 50px;
+  }
+}
+
+.artist {
+  color: black;
+  text-align: left;
+}
+
+.result_field {
+  padding: 12px 0;
+}
+
+.shibe {
+  border-radius: 50px;
+  width: 75px;
+  height: 75px;
+}

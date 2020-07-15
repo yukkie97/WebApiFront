@@ -1,0 +1,7 @@
+{
+  "name": "YukkieMusic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

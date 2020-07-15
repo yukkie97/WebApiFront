@@ -1,0 +1,40 @@
+ion-toolbar {
+  --background: var(--ion-color-primary);
+}
+
+.input_item {
+  border: 1px solid var(--ion-color-primary);
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.search_container {
+  height: 100px;
+  background-color: var(--ion-color-primary);
+}
+
+ion-spinner {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.no_result {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--ion-color-primary);
+}
+
+b {
+  text-overflow: clip;
+  white-space: pre;
+}
+
+.result_field {
+  padding: 12px 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
